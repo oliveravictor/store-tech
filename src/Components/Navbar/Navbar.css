@@ -1,5 +1,5 @@
 body {
-  background: tan;
+  background: rgb(236, 228, 217);
 }
 
 li,
@@ -11,7 +11,7 @@ a {
 }
 
 header {
-  background: #3d3a32;
+  background: #161615;
   height: 60px;
   width: 100%;
 }
@@ -41,5 +41,6 @@ header ul li a {
 }
 
 a:hover {
-  color: #fbe0c4;
+  color: rgb(246, 235, 169);
+  text-decoration-line: none;
 }

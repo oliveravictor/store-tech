@@ -4,16 +4,16 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <header>
-      <label className="title">Store Tech</label>
+      <label className="title">💻 Store Tech</label>
       <ul>
         <li>
-          <a href="#">seccion#1</a>
+          <a href="#">Notebooks</a>
         </li>
         <li>
-          <a href="#">seccion#2</a>
+          <a href="#">Celulares</a>
         </li>
         <li>
-          <a href="#">seccion#3</a>
+          <a href="#">Televisores</a>
         </li>
         <label>
           <Cartwidget className="cart" />
