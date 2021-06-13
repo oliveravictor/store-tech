@@ -1,18 +1,12 @@
-import Footer from "./Components/Footer/Footer";
-import ItemCount from "./Components/ItemCount/ItemCount";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
-  const onAdd = () => {
-    console.log("Gracias por tu compra!");
-  };
-
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting="¡Bienvenidos a Store Tech!" />
-      <ItemCount initial={0} stock={10} onAdd={onAdd} />
+      <ItemListContainer />
       <Footer className={"mt-3"} />
     </>
   );

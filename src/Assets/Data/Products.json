@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "type": "Moto G8",
+    "description": "Celular Motorola Moto G8",
+    "price": 15000,
+    "pictureUrl": "././Images/celular-motog8.jpg"
+  },
+  {
+    "id": 2,
+    "type": "Iphone 12pro",
+    "description": "Celular Iphone readme pro",
+    "price": 32550,
+    "pictureUrl": "../Images/celular-iphone.jpg"
+  },
+  {
+    "id": 3,
+    "type": "Notebook Dell",
+    "description": "Notebook Dell Intel 8 RAM",
+    "price": 50550,
+    "pictureUrl": "../Images/notebook-dell.jpg"
+  },
+  {
+    "id": 4,
+    "type": "Notebook Lenovo",
+    "description": "Notebook Lenovo con Windows 10",
+    "price": 69550,
+    "pictureUrl": "../Images/notebook-lenovo.jpg"
+  },
+  {
+    "id": 5,
+    "type": "Smart TV RCA",
+    "description": "Smart TV de 30' ultra HD",
+    "price": 29550,
+    "pictureUrl": "../Images/smart-rca.jpg"
+  },
+  {
+    "id": 6,
+    "type": "Smart TV Samsung",
+    "description": "Smart TV de 43' con android TV ",
+    "price": 39200,
+    "pictureUrl": "../Images/smartv-samsung.jpg"
+  }
+]

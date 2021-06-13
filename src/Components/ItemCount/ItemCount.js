@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Col, Row } from "react-bootstrap";
 
-const ItemCount = ({ initial, stock, onAdd }) => {
+const ItemCount = ({ initial, stock }) => {
   const [counter, setCounter] = useState(initial);
 
   let stockUpdate = stock - counter;
@@ -13,7 +13,6 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   const handleSubtract = () => counter > initial && setCounter(counter - 1);
 
   const addCart = () => {
-    onAdd();
     alert(
       `¡Gracias por tu compra de ${counter} productos, quedan ${stockUpdate} en stock!`
     );
@@ -21,25 +20,14 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   return (
     <Container
-      className={"d-flex justify-content-center"}
+      className={"d-flex justify-content-center mr-0"}
       style={{
-        height: "500px",
-        width: "400px",
+        height: "200px",
+        width: "300px",
       }}
     >
       <Row className={"mt-3"}>
-        <Col
-          style={{
-            border: "1px solid brown",
-          }}
-        >
-          <img
-            className={"mt-3"}
-            src="https://falabella.scene7.com/is/image/Falabella/8506788_1?wid=800&hei=800&qlt=70"
-            style={{
-              width: "250px",
-            }}
-          />
+        <Col>
           <h4 className={"mb-4 mt-3"}>
             Cantidad: {counter} - Stock: {stockUpdate}
           </h4>
