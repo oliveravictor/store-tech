@@ -1,5 +1,7 @@
-import motog8 from "../../Assets/Images/motog8.jpg";
+import Products from "../../Assets/Data/Products.json";
 import ItemCount from "../ItemCount/ItemCount";
+import "./Item.css";
+// import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { Card } from "react-bootstrap";
 
@@ -9,23 +11,18 @@ const Item = ({ item, initial, stock }) => {
   };
 
   return (
-    <Card style={{ width: "22rem" }}>
-      <Card.Body variant={"dark"}>
-        <Card.Title>
-          <h4 className={"text-center"}>{item.type}</h4>
-        </Card.Title>
-        <Card.Text className={"text-center"}>{item.description}</Card.Text>
-        <Card.Text className={"text-center"}> ${item.price}</Card.Text>
-        <Card.Img variant="top" src={motog8} />
-        {/* <Card.Img variant="top" src={item.pictureUrl} /> */}
-        <ItemCount initial={0} stock={10} onClick={() => onAdd()} />
-      </Card.Body>
-    </Card>
+    <div className={"item-div"}>
+      <Card className={"item-card"}>
+        <Card.Body variant={"dark"}>
+          <Card.Title className={"item-title"}>{item.type}</Card.Title>
+          <Card.Text className={"text-center"}>{item.model}</Card.Text>
+          <Card.Text className={"text-center"}> ${item.price}</Card.Text>
+          <Card.Img className={"item-img"} src={item.pictureUrl} />
+          <ItemCount initial={0} stock={10} onClick={() => onAdd()} />
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
 
 export default Item;
-
-{
-  /* <Card.Img variant="top" src={motog8} /> */
-}

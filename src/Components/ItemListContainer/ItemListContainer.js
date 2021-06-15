@@ -14,10 +14,10 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <>
-      <h2 className={"mt-4 text-center"}>¡Bienvenidos a Store Tech!</h2>
+    <div className={"container-fluid"}>
+      <h2 className={"mt-0 text-center"}>¡Bienvenidos a Store Tech!</h2>
       <ItemList items={items} />
-    </>
+    </div>
   );
 };
 

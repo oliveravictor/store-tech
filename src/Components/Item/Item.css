@@ -1,0 +1,23 @@
+.item-img {
+  width: 20rem;
+  height: 18rem;
+}
+
+.item-div {
+  border: "1px solid red";
+  display: flex;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.item-card {
+  height: 40rem;
+  border-radius: 1rem;
+}
+
+.item-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
