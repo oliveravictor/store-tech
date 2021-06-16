@@ -14,8 +14,7 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div className={"container-fluid"}>
-      <h2 className={"mt-0 text-center"}>¡Bienvenidos a Store Tech!</h2>
+    <div>
       <ItemList items={items} />
     </div>
   );

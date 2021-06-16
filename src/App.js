@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ItemDetailContainer />
       <ItemListContainer />
-      <Footer className={"mt-3"} />
+      <ItemDetailContainer />
+      <Footer />
     </div>
   );
 }

@@ -13,22 +13,26 @@ const ItemCount = ({ initial, stock }) => {
   const handleSubtract = () => counter > initial && setCounter(counter - 1);
 
   const addCart = () => {
-    alert(
-      `¡Gracias por tu compra de ${counter} productos, quedan ${stockUpdate} en stock!`
-    );
+    if (counter == 0) {
+      alert("¡No agregaste productos a tu carrito!");
+    } else {
+      alert(
+        `¡Gracias por tu compra de ${counter} productos, quedan ${stockUpdate} en stock!`
+      );
+    }
   };
 
   return (
     <Container
-      className={"d-flex justify-content-center mr-0"}
+      className={"d-flex justify-content-center mt-0 mb-0"}
       style={{
-        height: "200px",
+        height: "100px",
         width: "300px",
       }}
     >
-      <Row className={"mt-3"}>
+      <Row className={"mt-0"}>
         <Col>
-          <h4 className={"mb-4 mt-3"}>
+          <h4 className={"mb-2 mt-0"}>
             Cantidad: {counter} - Stock: {stockUpdate}
           </h4>
           <Button variant={"dark"} onClick={() => handleSubtract()}>

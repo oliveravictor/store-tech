@@ -15,8 +15,8 @@ const Item = ({ item, initial, stock }) => {
       <Card className={"item-card"}>
         <Card.Body variant={"dark"}>
           <Card.Title className={"item-title"}>{item.type}</Card.Title>
-          <Card.Text className={"text-center"}>{item.model}</Card.Text>
-          <Card.Text className={"text-center"}> ${item.price}</Card.Text>
+          {/* <Card.Text className={"text-center"}>{item.model}</Card.Text>
+          <Card.Text className={"text-center"}> ${item.price}</Card.Text> */}
           <Card.Img className={"item-img"} src={item.pictureUrl} />
           <ItemCount initial={0} stock={10} onClick={() => onAdd()} />
         </Card.Body>

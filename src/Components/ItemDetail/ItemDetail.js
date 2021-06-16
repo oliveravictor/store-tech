@@ -1,10 +1,17 @@
-import { Button } from "react-bootstrap";
+import ItemCount from "../ItemCount/ItemCount";
+import { Button, Card } from "react-bootstrap";
 
-const ItemDetail = () => {
+const ItemDetail = ({ details }) => {
   return (
-    <Button className={"btn btn-block"}>
-      <p>Ver más</p>
-    </Button>
+    <div>
+      {details.map((detail, i) => (
+        <div key={i}>
+          <p>{detail.description}</p>
+          <p>{detail.model}</p>
+          <img src={detail.pictureUrl}></img>
+        </div>
+      ))}
+    </div>
   );
 };
 
