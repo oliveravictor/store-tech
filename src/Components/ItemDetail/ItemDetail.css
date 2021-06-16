@@ -1,0 +1,48 @@
+.itemDetail-div {
+  height: 25rem;
+  display: flex;
+}
+
+.itemDetail-title {
+  font-size: 2rem;
+  float: right;
+}
+
+.itemDetail-description {
+  font-size: 1rem;
+  width: 45%;
+  float: right;
+}
+
+.itemDetail-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  float: right;
+  margin-right: 1rem;
+  width: 10%;
+}
+
+.itemDetail-card {
+  margin: 2rem auto;
+  padding: 3rem 1rem;
+  width: 70%;
+  background: rgb(241, 206, 163);
+  height: 26rem;
+}
+
+.itemDetail-img {
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 2rem;
+  float: left;
+}
+
+.itemDetail-button {
+  background: grey;
+  border: none;
+  display: flex;
+  height: "2.8rem";
+  justify-content: center;
+  width: 30%;
+  float: right;
+}
