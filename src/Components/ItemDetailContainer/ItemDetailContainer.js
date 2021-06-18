@@ -1,6 +1,7 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Products from "../../Assets/Data/Products.json";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [details, setDetails] = useState([]);

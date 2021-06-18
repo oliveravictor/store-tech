@@ -1,11 +1,10 @@
 .footer {
   background: rgb(195, 183, 166);
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  height: 75px;
+  height: 4.7rem;
   margin: 0;
-  padding: 25px 0;
-
+  padding: 1.3rem 0;
   text-align: center;
   text-transform: uppercase;
 }

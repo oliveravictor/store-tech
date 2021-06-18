@@ -4,43 +4,62 @@ body {
 
 li,
 a {
-  font-size: 20px;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   list-style: none;
   text-decoration: none;
+  padding: 0 0.5rem;
+  color: white;
 }
 
 header {
   background: #161615;
-  height: 60px;
+  height: 3.7rem;
   width: 100%;
 }
 
 .title {
   color: white;
-  font-size: 35px;
+  font-size: 2.2rem;
   font-weight: bold;
-  line-height: 60px;
-  padding: 0 50px;
+  line-height: 3.7rem;
+  margin-left: 2rem;
+  padding: 0 3.1rem;
 }
 
 header ul {
   float: right;
-  margin-right: 75px;
-  margin-top: 10px;
+  margin-right: 6.3rem;
+  margin-top: 0.6rem;
 }
 
 header ul li {
   display: inline-block;
-  padding: 0px 10px;
-  padding-top: 5px;
+  padding: 0 0.6rem;
+  padding-top: 0.3rem;
 }
 
 header ul li a {
   color: white;
+  line-height: 0.4rem;
 }
 
 a:hover {
   color: rgb(246, 235, 169);
   text-decoration-line: none;
+}
+
+header a.active {
+  background: rgb(236, 190, 129);
+  color: #161615;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+header a.cartOn {
+  border-bottom: 0.1rem solid burlywood;
+  line-height: 2rem;
+  height: 3rem;
+  width: 1rem;
+  background: #3b3b3b;
 }
