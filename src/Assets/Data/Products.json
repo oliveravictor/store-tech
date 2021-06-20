@@ -4,7 +4,8 @@
     "type": "Moto G8",
     "model": "Celular Motorola Moto G8",
     "price": 15000,
-    "pictureUrl": "../.././Images/celular-motog8.jpg",
+    "stock": 8,
+    "pictureUrl": "../.././Images/motog8.png",
     "description": "El Motorola G8 Power Lite cuenta con el sistema operativo avanzado Android 9.0, cuenta con cámara frontal de 8 Mpx y Desbloqueo con huella dactilar."
   },
   {
@@ -12,7 +13,8 @@
     "type": "Iphone 12pro",
     "model": "Celular Iphone readme pro",
     "price": 32550,
-    "pictureUrl": "../.././Images/celular-iphone.jpg",
+    "stock": 3,
+    "pictureUrl": "../.././Images/celular-iphone.png",
     "description": "El iPhone 12 Pro tiene una espectacular pantalla Super Retina XDR de 6.1 pulgadas. Con el nuevo Ceramic Shield, es cuatro veces más resistente a las caídas . Y tiene sistema de cámaras Pro y un rango de zoom óptico de 4x."
   },
   {
@@ -20,7 +22,8 @@
     "type": "Notebook Dell",
     "model": "Notebook Dell Intel 8 RAM",
     "price": 50550,
-    "pictureUrl": "../.././Images/notebook-dell.jpg",
+    "stock": 7,
+    "pictureUrl": "../.././Images/notebook-dell.png",
     "description": "Tiene una antalla LED de 14 y 1366x768 px de resolución te brindará colores más vivos y definidos. Eficiencia a tu alcance. Su procesador Intel Core i5 de 4 núcleos."
   },
   {
@@ -28,7 +31,8 @@
     "type": "Notebook Lenovo",
     "model": "Net Lenovo Ideapad W10",
     "price": 69550,
-    "pictureUrl": "../.././Images/notebook-lenovo.jpg",
+    "stock": 9,
+    "pictureUrl": "../.././Images/notebook-lenovo.png",
     "description": "El Lenovo IdeaPad 3 tiene un procesador Intel Core i5-1035G1 Quad-Core Processor, con pantalla LED FHD de 15,6 retroiluminada, antirreflejos, no táctil."
   },
   {
@@ -36,7 +40,8 @@
     "type": "Smart TV RCA",
     "model": "Smart TV de 32' ultra HD",
     "price": 29550,
-    "pictureUrl": "../.././Images/smart-rca.jpg",
+    "stock": 5,
+    "pictureUrl": "../.././Images/smart-rca.png",
     "description": "Con el Smart TV XF32SM vas a acceder a las aplicaciones de tu store. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos"
   },
   {
@@ -44,7 +49,8 @@
     "type": "Smart TV Samsung",
     "model": "Smart TV de 43' Android TV ",
     "price": 39200,
-    "pictureUrl": "../.././Images/smartv-samsung.jpg",
+    "stock": 4,
+    "pictureUrl": "../.././Images/smartv-samsung.png",
     "description": "Su función Screen Share permite duplicar la pantalla de tu smartphone, tablet o PC para que aparezca en la TV. Las imágenes tienen calidad superior con un alto nivel de detalle y colores mucho más llamativos"
   }
 ]

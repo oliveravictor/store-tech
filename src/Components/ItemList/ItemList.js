@@ -7,7 +7,7 @@ const ItemList = ({ items }) => {
       <h2 className={"itemList-title"}>Productos</h2>
       {items.map((item) => (
         <div className={"itemList-div mb-5"}>
-          <Item key={item.id} item={item} />
+          <Item key={item.id} item={item} id={item.id} />
         </div>
       ))}
     </>

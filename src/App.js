@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/item/:id" component={ItemDetailContainer} />
-        <Route path="/category/:id" component={ItemListContainer} />
+        <Route path="/category/:categoryId" component={ItemListContainer} />
         <Route path="/" component={ItemListContainer} />
       </Switch>
       <Footer />
