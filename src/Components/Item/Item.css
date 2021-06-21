@@ -15,6 +15,7 @@
 .item-card {
   height: 25rem;
   border-radius: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .item-title {

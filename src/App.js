@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" component={ItemListContainer} />
         <Route path="*" component={ErrorPage} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
