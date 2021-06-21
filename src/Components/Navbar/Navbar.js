@@ -1,15 +1,14 @@
 import Cartwidget from "../Cartwidget/Cartwidget";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header>
-      <label className="title">💻 Store Tech</label>
+      <Link exact to={"/"}>
+        <label className="title">💻 Store Tech</label>
+      </Link>
       <ul>
-        <NavLink exact to={"/"} activeClassName={"active"}>
-          Home
-        </NavLink>
         <NavLink to={"/celulares"} activeClassName={"active"}>
           Celulares
         </NavLink>

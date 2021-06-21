@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [details, setDetails] = useState([]);
-  const { id } = useParams();
+  const { id: prodId } = useParams();
 
   const getItems = () => {
     new Promise((result, reject) => {
@@ -16,15 +16,13 @@ const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    getItems(id);
-  }, [id]);
+    getItems(prodId);
+  }, [prodId]);
 
   return (
     <div>
-      <p className={"text-center mt-4"}>
-        item detail container - ITEM ID: {id}
-      </p>
-      <ItemDetail details={details} id={id} />
+      <h2 className={"text-center mt-4"}>Descripción del producto</h2>
+      <ItemDetail details={details} />
     </div>
   );
 };

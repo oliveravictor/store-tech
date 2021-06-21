@@ -5,6 +5,7 @@
     "model": "Celular Motorola Moto G8",
     "price": 15000,
     "stock": 8,
+    "category": "celulares",
     "pictureUrl": "../.././Images/motog8.png",
     "description": "El Motorola G8 Power Lite cuenta con el sistema operativo avanzado Android 9.0, cuenta con cámara frontal de 8 Mpx y Desbloqueo con huella dactilar."
   },
@@ -14,6 +15,7 @@
     "model": "Celular Iphone readme pro",
     "price": 32550,
     "stock": 3,
+    "category": "celulares",
     "pictureUrl": "../.././Images/celular-iphone.png",
     "description": "El iPhone 12 Pro tiene una espectacular pantalla Super Retina XDR de 6.1 pulgadas. Con el nuevo Ceramic Shield, es cuatro veces más resistente a las caídas . Y tiene sistema de cámaras Pro y un rango de zoom óptico de 4x."
   },
@@ -23,6 +25,7 @@
     "model": "Notebook Dell Intel 8 RAM",
     "price": 50550,
     "stock": 7,
+    "category": "notebooks",
     "pictureUrl": "../.././Images/notebook-dell.png",
     "description": "Tiene una antalla LED de 14 y 1366x768 px de resolución te brindará colores más vivos y definidos. Eficiencia a tu alcance. Su procesador Intel Core i5 de 4 núcleos."
   },
@@ -32,6 +35,7 @@
     "model": "Net Lenovo Ideapad W10",
     "price": 69550,
     "stock": 9,
+    "category": "notebooks",
     "pictureUrl": "../.././Images/notebook-lenovo.png",
     "description": "El Lenovo IdeaPad 3 tiene un procesador Intel Core i5-1035G1 Quad-Core Processor, con pantalla LED FHD de 15,6 retroiluminada, antirreflejos, no táctil."
   },
@@ -41,6 +45,7 @@
     "model": "Smart TV de 32' ultra HD",
     "price": 29550,
     "stock": 5,
+    "category": "televisores",
     "pictureUrl": "../.././Images/smart-rca.png",
     "description": "Con el Smart TV XF32SM vas a acceder a las aplicaciones de tu store. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos"
   },
@@ -50,6 +55,7 @@
     "model": "Smart TV de 43' Android TV ",
     "price": 39200,
     "stock": 4,
+    "category": "notebooks",
     "pictureUrl": "../.././Images/smartv-samsung.png",
     "description": "Su función Screen Share permite duplicar la pantalla de tu smartphone, tablet o PC para que aparezca en la TV. Las imágenes tienen calidad superior con un alto nivel de detalle y colores mucho más llamativos"
   }
