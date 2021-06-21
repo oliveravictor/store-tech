@@ -1,6 +1,6 @@
 .itemDetail-div {
-  height: 25rem;
-  display: flex;
+  height: 20rem;
+  display: inline-block;
 }
 
 .itemDetail-title {
