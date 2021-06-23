@@ -4,25 +4,26 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [details, setDetails] = useState([]);
-  const { id: prodId } = useParams();
+  const [detail, setDetails] = useState([]);
+  let { id: prodId } = useParams();
+  const [product] = Products.filter((detail) => detail.id === parseInt(prodId));
 
   const getItems = () => {
     new Promise((result, reject) => {
       setTimeout(() => {
-        result(Products);
+        result(product);
       }, 2000);
     }).then((response) => setDetails(response));
   };
 
   useEffect(() => {
-    getItems(prodId);
-  }, [prodId]);
+    getItems();
+  }, [product, prodId]);
 
   return (
     <div>
       <h2 className={"text-center mt-4"}>Descripción del producto</h2>
-      <ItemDetail details={details} />
+      <ItemDetail detail={detail} />
     </div>
   );
 };

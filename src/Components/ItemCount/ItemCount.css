@@ -1,0 +1,30 @@
+.div-count {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+}
+
+.cart-button:hover {
+  background: rgb(53, 52, 52);
+  border: 0.1rem solid rgb(15, 15, 15);
+}
+
+.handler-button {
+  background: rgb(68, 66, 66);
+  border: none;
+  float: right;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.handler-button:hover {
+  background: rgb(53, 52, 52);
+  border: 0.1rem solid rgb(15, 15, 15);
+}
+
+.quantity {
+  float: "right";
+  height: 2.2rem;
+  text-align: center;
+}

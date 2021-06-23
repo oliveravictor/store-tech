@@ -11,15 +11,11 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/item/:id" component={ItemDetailContainer} />
-        <Route
-          exact
-          path="/category/:categoryId"
-          component={ItemListContainer}
-        />
+        <Route path="/category/:categoryId" component={ItemListContainer} />
         <Route exact path="/" component={ItemListContainer} />
         <Route path="*" component={ErrorPage} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

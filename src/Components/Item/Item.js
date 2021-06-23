@@ -10,7 +10,12 @@ const Item = ({ item }) => {
           <Card.Title className={"item-title"}>{item.type}</Card.Title>
           <Card.Img className={"item-img"} src={item.pictureUrl} />
           <Link to={`/item/${item.id}`}>
-            <Button className={"btn btn-block"}>Ver Producto</Button>
+            <Button
+              style={{ borderRadius: "0.8rem" }}
+              className={"btn btn-block"}
+            >
+              Ver Producto
+            </Button>
           </Link>
         </Card.Body>
       </Card>
