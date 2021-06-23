@@ -62,9 +62,10 @@ header a.active {
 }
 
 header a.cartOn {
-  border-bottom: 0.1rem solid burlywood;
-  line-height: 2rem;
-  height: 3rem;
-  width: 1rem;
+  border-bottom: 0.2rem solid rgb(236, 190, 129);
   background: #3b3b3b;
+}
+
+.cartOn {
+  font-size: 1.5rem;
 }
