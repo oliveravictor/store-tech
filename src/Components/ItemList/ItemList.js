@@ -7,26 +7,30 @@ const ItemList = ({ items }) => {
 
   if (categoryId === undefined) {
     return (
-      <div>
+      <div style={{ minHeight: "100vh" }}>
         <p className={"itemList-title"}> Catalogo de productos</p>
-        {items.map((item, id) => (
-          <div key={id} className={"itemList-div"}>
-            <Item item={item} />
-          </div>
-        ))}
+        <div className="itemsContainer">
+          {items.map((item, id) => (
+            <div key={id}>
+              <Item item={item} />
+            </div>
+          ))}
+        </div>
       </div>
     );
   } else {
     return (
-      <div>
+      <div style={{ minHeight: "100vh" }}>
         <h2 className={"itemList-title"}>{categoryId}</h2>
-        {items
-          .filter((item) => item.category === categoryId)
-          .map((item, id) => (
-            <div key={id} className={"itemList-div"}>
-              <Item item={item} />
-            </div>
-          ))}
+        <div className="itemsContainer">
+          {items
+            .filter((item) => item.category === categoryId)
+            .map((item, id) => (
+              <div key={id}>
+                <Item item={item} />
+              </div>
+            ))}
+        </div>
       </div>
     );
   }

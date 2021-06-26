@@ -8,21 +8,31 @@ const Navbar = () => {
       <Link exact to="/">
         <label className="title">💻 Store Tech</label>
       </Link>
-      <ul>
-        <NavLink to="/category/celulares" activeClassName={"active"}>
+      <ul className="menu">
+        <NavLink
+          className="menu-options"
+          to="/category/celulares"
+          activeClassName={"active"}
+        >
           Celulares
         </NavLink>
-        <NavLink to="/category/notebooks" activeClassName={"active"}>
+        <NavLink
+          className="menu-options"
+          to="/category/notebooks"
+          activeClassName={"active"}
+        >
           Notebooks
         </NavLink>
-        <NavLink to="/category/televisores" activeClassName={"active"}>
+        <NavLink
+          className="menu-options"
+          to="/category/televisores"
+          activeClassName={"active"}
+        >
           Televisores
         </NavLink>
-        <label>
-          <NavLink to="/cart" activeClassName={"cartOn"}>
-            <Cartwidget className="cart" />
-          </NavLink>
-        </label>
+        <NavLink className="menu-options" to="/cart" activeClassName={"cartOn"}>
+          <Cartwidget className="cart" />
+        </NavLink>
       </ul>
     </header>
   );

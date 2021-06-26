@@ -1,14 +1,21 @@
-.itemList-div {
-  display: inline-block;
-}
-
 .itemList-title {
-  display: flex;
-  flex-direction: row;
   font-size: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  justify-content: center;
+  text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  width: 100%;
+  margin: 1rem 0;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .itemList-title {
+    font-size: 1.5rem;
+  }
 }

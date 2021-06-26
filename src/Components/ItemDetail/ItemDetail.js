@@ -30,37 +30,41 @@ const ItemDetail = ({ detail }) => {
   };
 
   return (
-    <div>
+    <div style={{ minHeight: "100vh" }}>
       <Card className={"detail__card"}>
-        <Card.Body>
+        <Card.Body className={"card-body"}>
           <img className={"detail__img"} src={detail.pictureUrl}></img>
-          <p className={"detail__title"}>{detail.model}</p>
-          <p className={"detail__description"}>{detail.description}</p>
-          <p className={"detail__items"}>
-            STOCK: {stockAvailable} - $
-            {counter == 0 ? detail.price : updatedPrice}
-          </p>
-          <ItemCount
-            value={counter}
-            stock={detail.stock}
-            onAdd={onAdd}
-            onSubtract={onSubtract}
-          />
-          {counter >= 1 ? (
-            <Link to={"/cart"}>
-              <Button variant="dark" className={"detail__sales"}>
-                C O M P R A R
-              </Button>
-            </Link>
-          ) : (
-            <Button
-              variant="dark"
-              onClick={() => addCart()}
-              className={"detail__button"}
-            >
-              🛒 Agregar productos
-            </Button>
-          )}
+          <div className={"detail__text"}>
+            <p className={"detail__title"}>{detail.model}</p>
+            <p className={"detail__description"}>{detail.description}</p>
+            <p className={"detail__items"}>
+              STOCK: {stockAvailable} - $
+              {counter == 0 ? detail.price : updatedPrice}
+            </p>
+            <div className="detail__itemcount__button">
+              <ItemCount
+                value={counter}
+                stock={detail.stock}
+                onAdd={onAdd}
+                onSubtract={onSubtract}
+              />
+              {counter >= 1 ? (
+                <Link to={"/cart"}>
+                  <Button variant="dark" className={"detail__sales"}>
+                    C O M P R A R
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  variant="dark"
+                  onClick={() => addCart()}
+                  className={"detail__button"}
+                >
+                  🛒 Agregar productos
+                </Button>
+              )}
+            </div>
+          </div>
         </Card.Body>
       </Card>
     </div>

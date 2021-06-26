@@ -1,21 +1,19 @@
+#root,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
 body {
   background: rgb(236, 228, 217);
 }
 
-li,
-a {
-  font-size: 1.1rem;
-
-  list-style: none;
-  text-decoration: none;
-  padding: 0 0.5rem;
-  color: white;
-}
-
 header {
   background: #161615;
-  height: 3.7rem;
-  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -23,49 +21,63 @@ header {
   cursor: pointer;
   font-size: 2.2rem;
   font-weight: bold;
-  line-height: 3.7rem;
-  margin-left: 2rem;
-  padding: 0 3.1rem;
+  padding: 1rem 0rem 1rem 3rem;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .title:hover {
   color: rgb(219, 189, 150);
+  text-decoration: none;
 }
 
-header ul {
-  float: right;
-  margin-right: 6.3rem;
-  margin-top: 0.6rem;
+.menu {
+  margin: 0;
+  padding: 0.5rem 0.25rem;
 }
 
-header ul li {
-  display: inline-block;
-  padding: 0 0.6rem;
-  padding-top: 0.3rem;
-}
-
-header ul li a {
+.menu-options {
+  font-size: 1.1rem;
+  list-style: none;
+  text-decoration: none;
   color: white;
-  line-height: 0.4rem;
+  padding: 0 0.8rem;
 }
 
-a:hover {
+.menu-options:hover {
   color: rgb(246, 235, 169);
   text-decoration-line: none;
 }
 
-header a.active {
+header .menu-options.active {
   background: rgb(236, 190, 129);
   color: #161615;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-header a.cartOn {
+header .menu-options.cartOn {
   border-bottom: 0.2rem solid rgb(236, 190, 129);
   background: #3b3b3b;
 }
 
 .cartOn {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    justify-content: center;
+  }
+  .title {
+    padding: 0.5rem 0rem;
+  }
+  .menu {
+    display: block;
+    margin: 0 auto;
+  }
+  .menu-options {
+    font-size: 14px;
+    padding: 0 0.4rem;
+  }
 }

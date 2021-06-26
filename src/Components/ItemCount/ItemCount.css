@@ -1,8 +1,10 @@
 .div-count {
   width: 50%;
+  margin: auto 0;
   display: flex;
-  justify-content: flex-end;
-  height: 100px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-button:hover {
@@ -13,9 +15,8 @@
 .handler-button {
   background: rgb(68, 66, 66);
   border: none;
-  float: right;
-  width: 2.2rem;
-  height: 2.2rem;
+  display: inline-block;
+  border: 0.1rem solid transparent;
 }
 
 .handler-button:hover {
@@ -24,7 +25,13 @@
 }
 
 .quantity {
-  float: "right";
-  height: 2.2rem;
+  display: inline-block;
+  width: 50px;
   text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .div-count {
+    margin: 2rem auto 1rem auto;
+  }
 }
