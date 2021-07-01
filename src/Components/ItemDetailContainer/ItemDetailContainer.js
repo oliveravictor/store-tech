@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <h2 className={"text-center mt-4"}>Descripción del producto</h2>
+      <h3 className={"text-center mt-4"}>Descripción del producto</h3>
       <ItemDetail detail={detail} />
     </div>
   );

@@ -5,20 +5,23 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Cart from "./Components/Cart/Cart";
+import { CartProvider } from "./Context/CartContex";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/item/:id" component={ItemDetailContainer} />
-        <Route path="/category/:categoryId" component={ItemListContainer} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/" component={ItemListContainer} />
-        <Route path="*" component={ErrorPage} />
-      </Switch>
-      <Footer />
-    </Router>
+    <CartProvider>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/item/:id" component={ItemDetailContainer} />
+          <Route path="/category/:categoryId" component={ItemListContainer} />
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/" component={ItemListContainer} />
+          <Route path="*" component={ErrorPage} />
+        </Switch>
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 }
 

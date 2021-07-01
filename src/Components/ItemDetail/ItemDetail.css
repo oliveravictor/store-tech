@@ -49,23 +49,25 @@
   border: none;
   border-radius: 0.4rem;
   font-size: 1rem;
-  height: 4rem;
+  height: 3rem;
   width: 190px;
   text-align: center;
 }
 .detail__sales {
   background: grey;
-  border-radius: 1rem;
+  background: rgba(17, 98, 248, 0.993);
+  border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: 500;
-  height: 4rem;
+  height: 3rem;
   width: 190px;
   border: 0.1rem solid transparent;
 }
 
 .detail__sales:hover {
   background: rgb(68, 66, 66);
-  color: bisque;
+  background: rgb(41, 115, 251);
+
   border: 0.1rem solid wheat;
 }
 

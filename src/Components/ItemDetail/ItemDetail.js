@@ -2,9 +2,12 @@ import { Button, Card } from "react-bootstrap";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../Context/CartContex";
 
 const ItemDetail = ({ detail }) => {
+  const { addItem } = useContext(CartContext);
+
   const initial = 0;
   const [counter, setCounter] = useState(initial);
   const stockAvailable = detail.stock - counter;
@@ -21,12 +24,14 @@ const ItemDetail = ({ detail }) => {
   const addCart = () => {
     if (counter == 0) {
       alert("¡No agregaste productos a tu carrito!");
+    } else {
+      alert(
+        `¡Agregaste ${counter} productos, quedan ${stockAvailable} en stock!`
+      );
     }
-    // else {
-    //   alert(
-    //     `¡Gracias por tu compra de ${counter} productos, quedan ${stockAvailable} en stock!`
-    //   );
-    // }
+
+    addItem(detail, counter);
+    console.log(`Agregaste ${counter} unidades de ${detail.model}`);
   };
 
   return (
@@ -48,10 +53,26 @@ const ItemDetail = ({ detail }) => {
                 onAdd={onAdd}
                 onSubtract={onSubtract}
               />
-              {counter >= 1 ? (
+
+              <Button
+                variant="dark"
+                onClick={() => addCart()}
+                className={"detail__button"}
+              >
+                🛒 Agregar productos
+              </Button>
+              {counter >= 1 && (
                 <Link to={"/cart"}>
                   <Button variant="dark" className={"detail__sales"}>
-                    C O M P R A R
+                    COMPRAR
+                  </Button>
+                </Link>
+              )}
+
+              {/* {counter >= 1 ? (
+                <Link to={"/cart"}>
+                  <Button variant="dark" className={"detail__sales"}>
+                    COMPRAR
                   </Button>
                 </Link>
               ) : (
@@ -62,7 +83,7 @@ const ItemDetail = ({ detail }) => {
                 >
                   🛒 Agregar productos
                 </Button>
-              )}
+              )} */}
             </div>
           </div>
         </Card.Body>
