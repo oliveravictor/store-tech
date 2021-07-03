@@ -61,13 +61,13 @@ const ItemDetail = ({ detail }) => {
               >
                 🛒 Agregar productos
               </Button>
-              {counter >= 1 && (
+              {/* {counter >= 1 && (
                 <Link to={"/cart"}>
                   <Button variant="dark" className={"detail__sales"}>
                     COMPRAR
                   </Button>
                 </Link>
-              )}
+              )} */}
 
               {/* {counter >= 1 ? (
                 <Link to={"/cart"}>

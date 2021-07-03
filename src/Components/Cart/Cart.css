@@ -2,14 +2,13 @@
   background-image: url("../../Assets/img-page/cartpay.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 .cart-title {
   font-size: 2rem;
   font-weight: 500;
-  letter-spacing: 0.2rem;
   display: flex;
   justify-content: center;
+  letter-spacing: 0.2rem;
   width: 100%;
 }
