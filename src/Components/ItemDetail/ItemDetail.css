@@ -38,12 +38,14 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
 .detail__itemcount__button {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 1rem 0;
+  justify-content: center;
+  margin: 0;
 }
+
 .detail__button {
   background: rgb(68, 66, 66);
   border: none;
@@ -52,9 +54,10 @@
   height: 3rem;
   width: 190px;
   text-align: center;
+  margin: 0.2rem 0;
 }
+
 .detail__sales {
-  background: grey;
   background: rgba(17, 98, 248, 0.993);
   border-radius: 0.4rem;
   font-size: 1.2rem;

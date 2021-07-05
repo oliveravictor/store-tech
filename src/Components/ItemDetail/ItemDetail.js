@@ -12,6 +12,7 @@ const ItemDetail = ({ detail }) => {
   const [counter, setCounter] = useState(initial);
   const stockAvailable = detail.stock - counter;
   const updatedPrice = detail.price * counter;
+  const [sales, setSales] = useState(true);
 
   const onAdd = () => {
     setCounter(counter < detail.stock ? counter + 1 : counter);
@@ -21,6 +22,39 @@ const ItemDetail = ({ detail }) => {
     setCounter(counter > initial ? counter - 1 : counter);
   };
 
+  const payment = () => {
+    if (sales) {
+      return (
+        <div>
+          <ItemCount
+            value={counter}
+            stock={detail.stock}
+            onAdd={onAdd}
+            onSubtract={onSubtract}
+          />
+
+          <Button
+            variant="dark"
+            onClick={() => addCart()}
+            className={"detail__button"}
+          >
+            🛒 Agregar productos
+          </Button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Link to={"/cart"}>
+            <Button variant="dark" className={"detail__sales"}>
+              COMPRAR
+            </Button>
+          </Link>
+        </div>
+      );
+    }
+  };
+
   const addCart = () => {
     if (counter == 0) {
       alert("¡No agregaste productos a tu carrito!");
@@ -28,10 +62,9 @@ const ItemDetail = ({ detail }) => {
       alert(
         `¡Agregaste ${counter} productos, quedan ${stockAvailable} en stock!`
       );
+      setSales(false);
     }
-
     addItem(detail, counter);
-    console.log(`Agregaste ${counter} unidades de ${detail.model}`);
   };
 
   return (
@@ -46,45 +79,7 @@ const ItemDetail = ({ detail }) => {
               STOCK: {stockAvailable} - $
               {counter == 0 ? detail.price : updatedPrice}
             </p>
-            <div className="detail__itemcount__button">
-              <ItemCount
-                value={counter}
-                stock={detail.stock}
-                onAdd={onAdd}
-                onSubtract={onSubtract}
-              />
-
-              <Button
-                variant="dark"
-                onClick={() => addCart()}
-                className={"detail__button"}
-              >
-                🛒 Agregar productos
-              </Button>
-              {/* {counter >= 1 && (
-                <Link to={"/cart"}>
-                  <Button variant="dark" className={"detail__sales"}>
-                    COMPRAR
-                  </Button>
-                </Link>
-              )} */}
-
-              {/* {counter >= 1 ? (
-                <Link to={"/cart"}>
-                  <Button variant="dark" className={"detail__sales"}>
-                    COMPRAR
-                  </Button>
-                </Link>
-              ) : (
-                <Button
-                  variant="dark"
-                  onClick={() => addCart()}
-                  className={"detail__button"}
-                >
-                  🛒 Agregar productos
-                </Button>
-              )} */}
-            </div>
+            <div className="detail__itemcount__button">{payment()}</div>
           </div>
         </Card.Body>
       </Card>

@@ -2,7 +2,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import Products from "../../Assets/Data/Products.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "react-loader-spinner";
+import Load from "react-loader-spinner";
 
 const ItemDetailContainer = () => {
   const [detail, setDetails] = useState([]);
@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
       setTimeout(() => {
         setIsLoading(false);
         result(product);
-      }, 1000);
+      }, 2000);
     }).then((response) => setDetails(response));
   };
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {isLoading === true ? (
-        <Loader />
+        <Load />
       ) : (
         <>
           <h3 className={"text-center mt-4"}>Descripción del producto</h3>

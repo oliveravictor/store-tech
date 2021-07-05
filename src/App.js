@@ -7,20 +7,20 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Cart from "./Components/Cart/Cart";
 import { CartProvider } from "./Context/CartContex";
 import { useState, useEffect } from "react";
-import Loader from "./Components/Loader/Loader";
+import Load from "./Components/Loader/Load";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   });
 
   return (
     <>
       {isLoading == true ? (
-        <Loader />
+        <Load />
       ) : (
         <CartProvider>
           <Router>

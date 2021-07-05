@@ -1,10 +1,9 @@
 .div-count {
-  width: 50%;
-  margin: auto 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  width: auto;
 }
 
 .cart-button:hover {

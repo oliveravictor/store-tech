@@ -1,7 +1,7 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 import Products from "../../Assets/Data/Products.json";
-import Loader from "react-loader-spinner";
+import Load from "react-loader-spinner";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -17,7 +17,7 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div>{isLoading === true ? <Loader /> : <ItemList items={items} />}</div>
+    <div>{isLoading === true ? <Load /> : <ItemList items={items} />}</div>
   );
 };
 

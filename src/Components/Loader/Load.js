@@ -1,7 +1,7 @@
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-const Loading = () => {
+const Load = () => {
   return (
     <div align="center" style={{ marginTop: "2rem" }}>
       <h4>Cargando...</h4>
@@ -16,4 +16,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Load;
