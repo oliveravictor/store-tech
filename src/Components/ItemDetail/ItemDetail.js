@@ -13,6 +13,7 @@ const ItemDetail = ({ detail }) => {
   const stockAvailable = detail.stock - counter;
   const updatedPrice = detail.price * counter;
   const [sales, setSales] = useState(true);
+  const [added, setAdded] = useState(false);
 
   const onAdd = () => {
     setCounter(counter < detail.stock ? counter + 1 : counter);
@@ -45,6 +46,12 @@ const ItemDetail = ({ detail }) => {
     } else {
       return (
         <div>
+          {added && (
+            <p className="detail__added">
+              Agregaste <span className={"detail__counter"}> {counter}</span>
+              {detail.type} a tu carrito
+            </p>
+          )}
           <Link to={"/cart"}>
             <Button variant="dark" className={"detail__sales"}>
               COMPRAR
@@ -62,6 +69,7 @@ const ItemDetail = ({ detail }) => {
       alert(
         `¡Agregaste ${counter} productos, quedan ${stockAvailable} en stock!`
       );
+      setAdded(true);
       setSales(false);
     }
     addItem(detail, counter);

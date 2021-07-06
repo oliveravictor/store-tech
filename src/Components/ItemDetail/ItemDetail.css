@@ -59,12 +59,12 @@
 
 .detail__sales {
   background: rgba(17, 98, 248, 0.993);
+  border: 0.1rem solid transparent;
   border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: 500;
   height: 3rem;
   width: 190px;
-  border: 0.1rem solid transparent;
 }
 
 .detail__sales:hover {
@@ -73,36 +73,67 @@
   border: 0.1rem solid wheat;
 }
 
+.detail__added {
+  border-radius: 0.3rem;
+  color: rgb(26, 19, 19);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+  line-height: 2.5rem;
+  background-color: rgba(195, 184, 85, 0.9);
+}
+
+.detail__counter {
+  color: rgb(27, 21, 21);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0 3px;
+}
+
 @media screen and (max-width: 576px) {
   .detail__card {
     padding: 1rem;
     width: 100%;
     height: inherit;
   }
+
   .card-body {
     justify-content: center;
   }
+
   .detail__img {
     width: 100%;
   }
+
   .detail__text {
     flex-basis: 100%;
     text-align: center;
   }
+
   .detail__title {
     margin-top: 0rem;
   }
+
   .detail__itemcount__button {
     display: block;
     margin: 1rem auto;
   }
+
   .detail__button {
     height: 3rem;
     text-align: center;
     margin: 1rem 0;
   }
+
   .detail__sales {
     height: 3rem;
     margin: 1rem 0;
+  }
+
+  .detail__added {
+    width: 100%;
+    margin: 0;
   }
 }

@@ -15,7 +15,9 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <div className={"cartfont"} style={{ minHeight: "100vh" }}>
-        <p className={"cart-title"}>TU CARRITO ESTÁ VACÍO</p>
+        <p className={"cart-title"} style={{ lineHeight: "5rem" }}>
+          TU CARRITO ESTÁ VACÍO
+        </p>
         <div className={"d-flex justify-content-center "}>
           <Link to="/">
             <Button
@@ -24,7 +26,7 @@ const Cart = () => {
                 borderRadius: "1rem",
               }}
               md={3}
-              className={"mt-3"}
+              className={"mt-0"}
               variant={"dark"}
             >
               Ver Tienda
@@ -71,11 +73,15 @@ const Cart = () => {
         ))}
         <h2 className={"text-center mt-5"}>Total: $ {total} </h2>
         <div className={"d-flex justify-content-center mb-5"}>
-          <Button className={"mt-3"} variant={"dark"} onClick={() => clear()}>
+          <Button
+            className={"mt-3 mb-5"}
+            variant={"dark"}
+            onClick={() => clear()}
+          >
             Vaciar Carrito
           </Button>
           <Link to="/">
-            <Button className={"ml-2 mt-3"} variant={"dark"}>
+            <Button className={"ml-2 mt-3 mb-5"} variant={"dark"}>
               Comprar
             </Button>
           </Link>
