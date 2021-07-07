@@ -83,10 +83,12 @@ const ItemDetail = ({ detail }) => {
           <div className={"detail__text"}>
             <p className={"detail__title"}>{detail.model}</p>
             <p className={"detail__description"}>{detail.description}</p>
-            <p className={"detail__items"}>
-              STOCK: {stockAvailable} - $
-              {counter == 0 ? detail.price : updatedPrice}
-            </p>
+            {!added && (
+              <p className={"detail__items"}>
+                STOCK: {stockAvailable} - $
+                {counter == 0 ? detail.price : updatedPrice}
+              </p>
+            )}
             <div className="detail__itemcount__button">{payment()}</div>
           </div>
         </Card.Body>
