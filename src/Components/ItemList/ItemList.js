@@ -24,7 +24,7 @@ const ItemList = ({ items }) => {
         <h2 className={"itemList-title"}>{categoryId}</h2>
         <div className="itemsContainer">
           {items
-            .filter((item) => item.category === categoryId)
+            .filter((item) => item.categoryId === categoryId)
             .map((item, id) => (
               <div key={id}>
                 <Item item={item} />

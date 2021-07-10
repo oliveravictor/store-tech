@@ -52,11 +52,11 @@ const Cart = () => {
               <img
                 className={"ml-3"}
                 style={{ height: "12rem" }}
-                src={x.item.pictureUrl}
+                src={x.item.imageId}
               ></img>
             </Col>
             <Col md={3} className={"mt-5"}>
-              <p>{x.item.model}</p>
+              <p>{x.item.title}</p>
             </Col>
             <Col md={2} className={"mt-5"}>
               <p>Cantidad: {x.quantity}</p>

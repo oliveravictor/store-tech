@@ -1,35 +1,42 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Products from "../../Assets/Data/Products.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import { getFirestore } from "../../firebase";
 
 const ItemDetailContainer = () => {
-  const [detail, setDetails] = useState([]);
-  let { id: prodId } = useParams();
-  const [product] = Products.filter((detail) => detail.id === parseInt(prodId));
-  const [Loading, setLoading] = useState(true);
+  const [detail, setDetails] = useState({});
+  let { id } = useParams();
+  const [loading, setLoading] = useState(true);
 
   const getItems = () => {
-    new Promise((result, reject) => {
-      setTimeout(() => {
-        setLoading(false);
-        result(product);
-      }, 1000);
-    }).then((response) => setDetails(response));
+    const db = getFirestore();
+    const itemsDb = db.collection("items");
+    const itemId = itemsDb.doc(id);
+    itemId
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          console.log("no existe el documento");
+          return;
+        }
+        setDetails({ id: doc.id, ...doc.data() });
+      })
+      .catch((e) => console.log(`ocurrió un error ${e}`));
   };
 
   useEffect(() => {
     getItems();
-  }, [product, prodId]);
+    setLoading(false);
+  }, [detail, id]);
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      {Loading === true ? (
+      {loading === true ? (
         <div className={"d-flex justify-content-center mt-5"}>
           <ScaleLoader
             color={"#343A40"}
-            loading={Loading}
+            loading={loading}
             height={100}
             width={10}
             radius={6}
@@ -38,7 +45,7 @@ const ItemDetailContainer = () => {
         </div>
       ) : (
         <>
-          <h3 className={"text-center mt-4"}>Descripción del producto</h3>
+          <h3 className={"text-center mt-4"}>Detalle del producto</h3>
           <ItemDetail detail={detail} />
         </>
       )}

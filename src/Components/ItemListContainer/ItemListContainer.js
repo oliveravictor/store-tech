@@ -1,28 +1,41 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
-import Products from "../../Assets/Data/Products.json";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import { getFirestore } from "../../firebase";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const [Loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    new Promise((result, reject) => {
-      setTimeout(() => {
+    const db = getFirestore();
+    const itemCollection = db.collection("items");
+    itemCollection
+      .get()
+      .then((querySnapshot) => {
+        let itemsProd = querySnapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        });
+        setItems(itemsProd);
+      })
+      .catch((e) => {
+        console.log(`error inesperado ${e}`);
+      })
+      .finally(() => {
         setLoading(false);
-        result(Products);
-      }, 1000);
-    }).then((response) => setItems(response));
+      });
   }, []);
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      {Loading === true ? (
+      {loading === true ? (
         <div className={"d-flex justify-content-center mt-5"}>
           <ScaleLoader
             color={"#343A40"}
-            loading={Loading}
+            loading={loading}
             height={100}
             width={10}
             radius={6}

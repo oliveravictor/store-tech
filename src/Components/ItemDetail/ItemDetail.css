@@ -92,6 +92,13 @@
   padding: 0 3px;
 }
 
+.detail__buynext {
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 576px) {
   .detail__card {
     padding: 1rem;
@@ -113,6 +120,7 @@
   }
 
   .detail__title {
+    font-size: 1.2rem;
     margin-top: 0rem;
   }
 
@@ -133,7 +141,14 @@
   }
 
   .detail__added {
+    font-size: 0.8rem;
     width: 100%;
     margin: 0;
+  }
+
+  .detail__buynext {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: center;
   }
 }

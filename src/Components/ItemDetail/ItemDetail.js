@@ -7,7 +7,6 @@ import { CartContext } from "../../Context/CartContex";
 
 const ItemDetail = ({ detail }) => {
   const { addItem } = useContext(CartContext);
-
   const initial = 0;
   const [counter, setCounter] = useState(initial);
   const stockAvailable = detail.stock - counter;
@@ -48,8 +47,8 @@ const ItemDetail = ({ detail }) => {
         <div>
           {added && (
             <p className="detail__added">
-              Agregaste <span className={"detail__counter"}> {counter}</span>
-              {detail.type} a tu carrito
+              ¡Agregaste <span className={"detail__counter"}> {counter}</span>
+              {detail.title} al carrito!
             </p>
           )}
           <Link to={"/cart"}>
@@ -79,15 +78,19 @@ const ItemDetail = ({ detail }) => {
     <div style={{ minHeight: "100vh" }}>
       <Card className={"detail__card"}>
         <Card.Body className={"card-body"}>
-          <img className={"detail__img"} src={detail.pictureUrl}></img>
+          <img className={"detail__img"} src={detail.imageId}></img>
           <div className={"detail__text"}>
-            <p className={"detail__title"}>{detail.model}</p>
+            <p className={"detail__title"}>{detail.title}</p>
             <p className={"detail__description"}>{detail.description}</p>
-            {!added && (
+            {!added ? (
               <p className={"detail__items"}>
                 STOCK: {stockAvailable} - $
                 {counter == 0 ? detail.price : updatedPrice}
               </p>
+            ) : (
+              <Link to={"/"}>
+                <p className="detail__buynext">Seguir comprando</p>
+              </Link>
             )}
             <div className="detail__itemcount__button">{payment()}</div>
           </div>
