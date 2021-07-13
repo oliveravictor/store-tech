@@ -1,0 +1,29 @@
+.error__container {
+  background-image: url("../../Assets/img-page/error-page.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.error__title {
+  text-align: center;
+  line-height: 5rem;
+}
+
+.error__button {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .error__title {
+    font-size: 1.5rem;
+  }
+
+  .error__container {
+    background-image: url("../../Assets/img-page/error-page-mq.jpg");
+    background-size: cover;
+  }
+}

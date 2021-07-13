@@ -14,22 +14,12 @@ const Cart = () => {
 
   if (cart.length === 0) {
     return (
-      <div className={"cartfont"} style={{ minHeight: "100vh" }}>
-        <p className={"cart-title"} style={{ lineHeight: "5rem" }}>
-          TU CARRITO ESTÁ VACÍO
-        </p>
+      <div className={"cart__font"}>
+        <p className={"cart__title"}>TU CARRITO ESTÁ VACÍO</p>
         <div className={"d-flex justify-content-center "}>
           <Link to="/">
-            <Button
-              style={{
-                width: "10rem",
-                borderRadius: "1rem",
-              }}
-              md={3}
-              className={"mt-0"}
-              variant={"dark"}
-            >
-              Ver Tienda
+            <Button md={3} className={"cart__button mt-0"} variant={"dark"}>
+              VER TIENDA
             </Button>
           </Link>
         </div>
@@ -64,7 +54,7 @@ const Cart = () => {
             <Col md={2} className={"mt-5"}>
               <p>Precio: ${x.item.price}</p>
             </Col>
-            <Col md={2} className={"mt-5"}>
+            <Col md={2} className={"cart__delete mt-5"}>
               <Button variant={"dark"} onClick={() => removeItem(x.item.id)}>
                 Eliminar
               </Button>

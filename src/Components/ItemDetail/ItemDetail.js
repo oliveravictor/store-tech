@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState, useContext } from "react";
 import { CartContext } from "../../Context/CartContex";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 const ItemDetail = ({ detail }) => {
   const { addItem } = useContext(CartContext);
@@ -88,8 +89,11 @@ const ItemDetail = ({ detail }) => {
                 {counter == 0 ? detail.price : updatedPrice}
               </p>
             ) : (
-              <Link to={"/"}>
-                <p className="detail__buynext">Seguir comprando</p>
+              <Link to={"/"} className="detail__buynext">
+                <p>
+                  Seguir comprando
+                  <RiArrowGoBackFill className="mb-3" />
+                </p>
               </Link>
             )}
             <div className="detail__itemcount__button">{payment()}</div>

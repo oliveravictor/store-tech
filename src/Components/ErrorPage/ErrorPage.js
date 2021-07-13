@@ -1,16 +1,15 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./ErrorPage.css";
 
 const ErrorPage = () => {
   return (
-    <>
-      <h3 className="text-center mt-5">Ups.. página no encontrada</h3>;
-      <Link to="/">
-        <Button className="mb-5 mt-5" style={{ width: "28%", margin: "35%" }}>
-          Volver a Home
-        </Button>
+    <div className={"error__container"}>
+      <h3 className="error__title">Ups.. página no encontrada</h3>;
+      <Link to="/" className={"error__button"}>
+        <Button variant="dark">Volver a Home</Button>
       </Link>
-    </>
+    </div>
   );
 };
 
