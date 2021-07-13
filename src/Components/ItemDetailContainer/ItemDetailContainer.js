@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { getFirestore } from "../../firebase";
+import Header from "./../Header/Header";
 
 const ItemDetailContainer = () => {
   const [detail, setDetails] = useState({});
@@ -11,9 +12,9 @@ const ItemDetailContainer = () => {
 
   const getItems = () => {
     const db = getFirestore();
-    const itemsDb = db.collection("items");
-    const itemId = itemsDb.doc(id);
-    itemId
+    const items = db.collection("items");
+    const item = items.doc(id);
+    item
       .get()
       .then((doc) => {
         if (!doc.exists) {
@@ -45,6 +46,7 @@ const ItemDetailContainer = () => {
         </div>
       ) : (
         <>
+          <Header />
           <h3 className={"text-center mt-4"}>Detalle del producto</h3>
           <ItemDetail detail={detail} />
         </>

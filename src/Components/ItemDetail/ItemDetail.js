@@ -54,7 +54,7 @@ const ItemDetail = ({ detail }) => {
           )}
           <Link to={"/cart"}>
             <Button variant="dark" className={"detail__sales"}>
-              COMPRAR
+              MI CARRITO
             </Button>
           </Link>
         </div>
@@ -89,12 +89,12 @@ const ItemDetail = ({ detail }) => {
                 {counter == 0 ? detail.price : updatedPrice}
               </p>
             ) : (
-              <Link to={"/"} className="detail__buynext">
-                <p>
+              <div className={"text-right"}>
+                <Link to={"/"} className={"detail__buynext"}>
                   Seguir comprando
                   <RiArrowGoBackFill className="mb-3" />
-                </p>
-              </Link>
+                </Link>
+              </div>
             )}
             <div className="detail__itemcount__button">{payment()}</div>
           </div>

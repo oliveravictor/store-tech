@@ -16,7 +16,12 @@ header {
   align-items: center;
 }
 
-.title {
+.menu {
+  margin: 0 1.8rem 0 0;
+  padding: 0.5rem 0.25rem;
+}
+
+.menu__label {
   color: white;
   cursor: pointer;
   font-size: 2.2rem;
@@ -26,17 +31,12 @@ header {
   margin: 0 auto;
 }
 
-.title:hover {
+.menu__label:hover {
   color: rgb(219, 189, 150);
   text-decoration: none;
 }
 
-.menu {
-  margin: 0 1.8rem 0 0;
-  padding: 0.5rem 0.25rem;
-}
-
-.menu-options {
+.menu__options {
   font-size: 1.1rem;
   list-style: none;
   text-decoration: none;
@@ -44,19 +44,19 @@ header {
   padding: 0 0.8rem;
 }
 
-.menu-options:hover {
+.menu__options:hover {
   color: rgb(246, 235, 169);
   text-decoration-line: none;
 }
 
-header .menu-options.active {
+header .menu__options.active {
   background: rgb(236, 190, 129);
   color: #161615;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-header .menu-options.cartOn {
+header .menu__options.cartOn {
   border-bottom: 0.2rem solid rgb(236, 190, 129);
   background: #3b3b3b;
 }
@@ -65,18 +65,29 @@ header .menu-options.cartOn {
   font-size: 1.5rem;
 }
 
+.menu__container {
+  position: sticky;
+  top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 1000;
+}
+
 @media screen and (max-width: 576px) {
   header {
     justify-content: center;
   }
-  .title {
-    padding: 0.5rem 0rem;
-  }
+
   .menu {
     display: block;
     margin: 0 auto;
   }
-  .menu-options {
+
+  .menu__label {
+    padding: 0.5rem 0rem;
+  }
+
+  .menu__options {
     font-size: 1rem;
     padding: 0 0.4rem;
   }

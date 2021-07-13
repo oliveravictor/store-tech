@@ -16,6 +16,9 @@ const Cart = () => {
     return (
       <div className={"cart__font"}>
         <p className={"cart__title"}>TU CARRITO ESTÁ VACÍO</p>
+        <p className={"cart__subtitle"}>
+          ¿No sabés qué comprar? ¡Muchos productos te esperan!
+        </p>
         <div className={"d-flex justify-content-center "}>
           <Link to="/">
             <Button md={3} className={"cart__button mt-0"} variant={"dark"}>
@@ -72,7 +75,7 @@ const Cart = () => {
           </Button>
           <Link to="/">
             <Button className={"ml-2 mt-3 mb-5"} variant={"dark"}>
-              Comprar
+              Terminar compra
             </Button>
           </Link>
         </div>

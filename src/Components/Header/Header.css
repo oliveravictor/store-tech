@@ -1,0 +1,13 @@
+.header__container {
+  background: url("../../Assets/img-page/header.jpg");
+  background-size: contain;
+  height: 360px;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .header__container {
+    height: 200px;
+    background-size: cover;
+  }
+}

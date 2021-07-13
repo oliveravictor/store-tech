@@ -1,6 +1,7 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
 import { useParams } from "react-router";
+import Header from "./../Header/Header";
 
 const ItemList = ({ items }) => {
   const { categoryId } = useParams();
@@ -8,6 +9,7 @@ const ItemList = ({ items }) => {
   if (categoryId === undefined) {
     return (
       <div style={{ minHeight: "100vh" }}>
+        <Header />
         <p className={"itemList-title"}> Catalogo de productos</p>
         <div className="itemsContainer">
           {items.map((item, id) => (
@@ -21,6 +23,7 @@ const ItemList = ({ items }) => {
   } else {
     return (
       <div style={{ minHeight: "100vh" }}>
+        <Header />
         <h2 className={"itemList-title"}>{categoryId}</h2>
         <div className="itemsContainer">
           {items
