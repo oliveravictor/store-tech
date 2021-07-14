@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Cart from "./Components/Cart/Cart";
 import { CartProvider } from "./Context/CartContex";
+import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/category/:categoryId" component={ItemListContainer} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/" component={ItemListContainer} />
+          <Route exact path="/checkout" component={Checkout} />
           <Route path="*" component={ErrorPage} />
         </Switch>
         <Footer />
