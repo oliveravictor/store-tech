@@ -55,6 +55,10 @@
     justify-content: center;
   }
 
+  th {
+    font-size: 0.8rem;
+  }
+
   .checkout__th {
     font-size: 0.8rem;
     line-height: 1rem;
