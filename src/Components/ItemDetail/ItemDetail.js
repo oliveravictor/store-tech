@@ -72,7 +72,7 @@ const ItemDetail = ({ detail }) => {
       setAdded(true);
       setSales(false);
     }
-    addItem(detail, counter);
+    addItem(detail, counter, detail.id);
   };
 
   return (

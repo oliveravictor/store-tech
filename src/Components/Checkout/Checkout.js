@@ -38,16 +38,15 @@ const Checkout = () => {
         let batch = db.batch();
         const dataBase = db.collection("items");
 
-        cartItems.cart
-          .forEach((x) => {
-            batch.update(dataBase.doc(x.id), {
-              stock: x.item.stock - x.quantity,
-            });
-          })
-          .batch.commit()
-          .then(() => {
-            cartItems.clear();
+        cartItems.cart.forEach((x) => {
+          batch.update(dataBase.doc(x.id), {
+            stock: x.item.stock - x.quantity,
           });
+        });
+
+        batch.commit().then(() => {
+          cartItems.clear();
+        });
       })
       .catch((e) => {
         console.log("ocurrió un error", e);

@@ -7,8 +7,8 @@ export const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
   const [total, setTotal] = useState(0);
 
-  const addItem = (item, quantity) => {
-    setCart([...cart, { item, quantity }]);
+  const addItem = (item, quantity, id) => {
+    setCart([...cart, { item, quantity, id }]);
   };
 
   const removeItem = (itemId) => {
