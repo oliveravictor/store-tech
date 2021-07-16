@@ -1,6 +1,7 @@
 import "./Checkout.css";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Context/CartContex";
+import DotLoader from "react-spinners/DotLoader";
 import { Form, Button, Table, InputGroup } from "react-bootstrap";
 import { getFirestore } from "../../firebase";
 import firebase from "firebase/app";
@@ -11,6 +12,8 @@ const Checkout = () => {
   const [orderNow, setOrderNow] = useState({});
   const [idOrder, setIdOrder] = useState("");
   const [dataUser, setDataUser] = useState({ name: "", phone: "", email: "" });
+  const [loading, setLoading] = useState(true);
+  const [payment, setPayment] = useState(false);
 
   useEffect(() => {
     setOrderNow({
@@ -29,6 +32,8 @@ const Checkout = () => {
   };
 
   const handleBuy = () => {
+    setLoading(true);
+    setPayment(true);
     const db = getFirestore();
     const orders = db.collection("orders");
     orders
@@ -53,8 +58,30 @@ const Checkout = () => {
       })
       .finally(() => {
         console.log("Operación exitosa");
+        setLoading(false);
       });
   };
+
+  if (payment) {
+    if (loading) {
+      return (
+        <div
+          className={"d-flex justify-content-center mt-5"}
+          style={{ minHeight: "100vh" }}
+        >
+          <DotLoader color={"#A19882"} loading={loading} size={100} />
+        </div>
+      );
+    } else {
+      return (
+        <div className={"text-center"} style={{ minHeight: "100vh" }}>
+          <h1 className={"mt-4"}>OPERACIÓN EXITOSA</h1>
+          <p>Código de compra: {idOrder && <b>{idOrder}</b>}</p>
+          <p>¡Gracias por comprar en StoreTech!</p>
+        </div>
+      );
+    }
+  }
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -118,13 +145,8 @@ const Checkout = () => {
             className={"checkout__button"}
             onClick={handleBuy}
           >
-            Generar pago
+            Procesar pago
           </Button>
-        </div>
-
-        <div className={"text-center"}>
-          <p>OPERACIÓN EXITOSA</p>
-          <p>Código de compra: {idOrder && <div>{idOrder}</div>}</p>
         </div>
       </div>
     </div>
