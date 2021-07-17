@@ -8,7 +8,7 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 
 const ItemDetail = ({ detail }) => {
   const { addItem } = useContext(CartContext);
-  const initial = 0;
+  const initial = 1;
   const [counter, setCounter] = useState(initial);
   const stockAvailable = detail.stock - counter;
   const updatedPrice = detail.price * counter;
@@ -63,15 +63,8 @@ const ItemDetail = ({ detail }) => {
   };
 
   const addCart = () => {
-    if (counter == 0) {
-      alert("¡No agregaste productos a tu carrito!");
-    } else {
-      alert(
-        `¡Agregaste ${counter} productos, quedan ${stockAvailable} en stock!`
-      );
-      setAdded(true);
-      setSales(false);
-    }
+    setAdded(true);
+    setSales(false);
     addItem(detail, counter, detail.id);
   };
 

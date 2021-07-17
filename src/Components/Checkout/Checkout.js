@@ -6,6 +6,7 @@ import { Form, Button, Table, InputGroup } from "react-bootstrap";
 import { getFirestore } from "../../firebase";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { FcPaid } from "react-icons/fc";
 
 const Checkout = () => {
   const cartItems = useContext(CartContext);
@@ -65,89 +66,89 @@ const Checkout = () => {
   if (payment) {
     if (loading) {
       return (
-        <div
-          className={"d-flex justify-content-center mt-5"}
-          style={{ minHeight: "100vh" }}
-        >
+        <div className={"checkout__loader"}>
           <DotLoader color={"#A19882"} loading={loading} size={100} />
         </div>
       );
     } else {
       return (
-        <div className={"text-center"} style={{ minHeight: "100vh" }}>
-          <h1 className={"mt-4"}>OPERACIÓN EXITOSA</h1>
-          <p>Código de compra: {idOrder && <b>{idOrder}</b>}</p>
-          <p>¡Gracias por comprar en StoreTech!</p>
+        <div className={"checkout__container"}>
+          <div className={"checkout__token"}>
+            <div className={"checkout__card"}>
+              <p className={"checkout__card-title"}>Operación Exitosa</p>
+              <p className={"checkout__card-code"}>Código de compra:</p>
+              {idOrder && <b className={"checkout__card-order"}>{idOrder}</b>}
+              <FcPaid className={"checkout__card-icon"} />
+              <p className={"checkout__card-code"}>
+                ¡Gracias por comprar en StoreTech!
+              </p>
+            </div>
+          </div>
         </div>
       );
     }
   }
 
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <div className="checkout">
-        <p className="checkout__title">Ingresá tus datos</p>
-        <Form>
-          <InputGroup className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Nombre</Form.Label>
-            <Form.Control
-              onChange={handleInput}
-              type="text"
-              placeholder="Ingresá tu nombre"
-              required="required"
-              id="name"
-            />
-            <Form.Label>Correo</Form.Label>
-            <Form.Control
-              onChange={handleInput}
-              type="email"
-              placeholder="Correo@ejemplo.com"
-              required="required"
-              id="email"
-            />
-            <Form.Label>Telefono</Form.Label>
-            <Form.Control
-              onChange={handleInput}
-              type="number"
-              placeholder="Tu número sin el 0 y sin el 15"
-              required="required"
-              id="phone"
-            />
-          </InputGroup>
-        </Form>
-        <p className="checkout__title">Mi Carrito</p>
-        <Table>
-          <thead>
-            <tr>
-              <th>PRODUCTO</th>
-              <th>PRECIO</th>
-              <th>CANTIDAD</th>
-              <th>SUBTOTAL</th>
-            </tr>
-          </thead>
-          {cartItems.cart.map(({ item, quantity }) => {
-            return (
-              <thead key={item.id}>
-                <tr>
-                  <th className={"checkout__th"}>{item.title}</th>
-                  <th className={"checkout__th"}>${item.price}</th>
-                  <th className={"checkout__th"}>{quantity}</th>
-                  <th className={"checkout__th"}>${quantity * item.price}</th>
-                </tr>
-              </thead>
-            );
-          })}
-        </Table>
-        <p className={"checkout__total"}>Total: ${cartItems.total}</p>
-        <div className={"d-flex justify-content-center"}>
-          <Button
-            type="submit"
-            className={"checkout__button"}
-            onClick={handleBuy}
-          >
-            Procesar pago
-          </Button>
-        </div>
+    <div className={"checkout"}>
+      <p className={"checkout__title"}>Ingresá tus datos</p>
+      <Form>
+        <InputGroup className="mb-3" controlId="formBasicEmail" required={true}>
+          <Form.Label className={"checkout__label"}>Nombre</Form.Label>
+          <Form.Control
+            onChange={handleInput}
+            type="text"
+            placeholder="Ingresá tu nombre"
+            id="name"
+          />
+          <Form.Label className={"checkout__label"}>Correo</Form.Label>
+          <Form.Control
+            onChange={handleInput}
+            type="email"
+            placeholder="Correo@ejemplo.com"
+            id="email"
+          />
+          <Form.Label className={"checkout__label"}>Telefono</Form.Label>
+          <Form.Control
+            onChange={handleInput}
+            type="number"
+            placeholder="Tu número sin el 0 y sin el 15"
+            id="phone"
+          />
+        </InputGroup>
+      </Form>
+      <p className="checkout__title">Mi Carrito</p>
+      <Table>
+        <thead>
+          <tr>
+            <th>PRODUCTO</th>
+            <th>PRECIO</th>
+            <th>CANTIDAD</th>
+            <th>SUBTOTAL</th>
+          </tr>
+        </thead>
+        {cartItems.cart.map(({ item, quantity }) => {
+          return (
+            <thead key={item.id}>
+              <tr>
+                <th className={"checkout__th"}>{item.title}</th>
+                <th className={"checkout__th"}>${item.price}</th>
+                <th className={"checkout__th"}>{quantity}</th>
+                <th className={"checkout__th"}>${quantity * item.price}</th>
+              </tr>
+            </thead>
+          );
+        })}
+      </Table>
+      <p className={"checkout__total"}>Total: ${cartItems.total}</p>
+      <div className={"d-flex justify-content-center"}>
+        <Button
+          type="submit"
+          className={"checkout__button"}
+          onClick={handleBuy}
+        >
+          Procesar pago
+        </Button>
       </div>
     </div>
   );
