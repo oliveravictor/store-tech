@@ -32,6 +32,9 @@ const Checkout = () => {
     });
   };
 
+  let inputClear =
+    dataUser.name === "" || dataUser.phone === "" || dataUser.email === "";
+
   const handleBuy = () => {
     setLoading(true);
     setPayment(true);
@@ -93,7 +96,7 @@ const Checkout = () => {
     <div className={"checkout"}>
       <p className={"checkout__title"}>Ingresá tus datos</p>
       <Form>
-        <InputGroup className="mb-3" controlId="formBasicEmail" required={true}>
+        <InputGroup className="mb-3" controlId="formBasicEmail">
           <Form.Label className={"checkout__label"}>Nombre</Form.Label>
           <Form.Control
             onChange={handleInput}
@@ -142,13 +145,19 @@ const Checkout = () => {
       </Table>
       <p className={"checkout__total"}>Total: ${cartItems.total}</p>
       <div className={"d-flex justify-content-center"}>
-        <Button
-          type="submit"
-          className={"checkout__button"}
-          onClick={handleBuy}
-        >
-          Procesar pago
-        </Button>
+        {!inputClear ? (
+          <Button
+            type="submit"
+            className={"checkout__button"}
+            onClick={handleBuy}
+          >
+            Procesar pago
+          </Button>
+        ) : (
+          <Button type="submit" className={"checkout__button-opacity"}>
+            Procesar pago
+          </Button>
+        )}
       </div>
     </div>
   );
