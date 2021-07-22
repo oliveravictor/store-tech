@@ -30,34 +30,23 @@ const Cart = () => {
     );
   } else {
     return (
-      <div style={{ minHeight: "100vh" }}>
+      <div className={"cart__row-div"}>
         <h2 className={"text-center mt-3"}>TU COMPRA</h2>
         {cart.map((x) => (
-          <Row
-            className={"mt-4 ml-5 mr-5"}
-            style={{
-              background: "wheat",
-              borderRadius: "1rem",
-            }}
-            key={x.item.id}
-          >
+          <Row className={"cart__row"} key={x.item.id}>
             <Col md={3}>
-              <img
-                className={"ml-3"}
-                style={{ height: "12rem" }}
-                src={x.item.imageId}
-              ></img>
+              <img className={"cart__row-img"} src={x.item.imageId}></img>
             </Col>
-            <Col md={3} className={"mt-5"}>
+            <Col md={3} className={"cart__row-items"}>
               <p>{x.item.title}</p>
             </Col>
-            <Col md={2} className={"mt-5"}>
+            <Col md={2} className={"cart__row-items"}>
               <p>Cantidad: {x.quantity}</p>
             </Col>
-            <Col md={2} className={"mt-5"}>
+            <Col md={2} className={"cart__row-items"}>
               <p>Precio: ${x.item.price}</p>
             </Col>
-            <Col md={2} className={"cart__delete mt-5"}>
+            <Col md={2} className={"cart__row-button"}>
               <Button variant={"dark"} onClick={() => removeItem(x.item.id)}>
                 Eliminar
               </Button>

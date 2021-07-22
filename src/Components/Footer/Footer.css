@@ -24,9 +24,9 @@
 }
 
 .footer__button:hover {
-  font-size: 2rem;
+  font-size: 1.8rem;
   background: rgb(27, 27, 27);
-  transition: 1s;
+  transition: 0.4s;
 }
 
 .footer__button i {
