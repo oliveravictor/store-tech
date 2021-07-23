@@ -1,10 +1,25 @@
 ## Store Tech
 
 Website of Store Tech, the house of sale online par excellence.
+Ecommerce created with React and Firebase.
 
-## Preview
+## Demo
 
 ![Store Tech](preview/storetech.gif)
+
+## Author
+
+• Víctor Olivera •
+Linkedin: https://www.linkedin.com/in/victor-olivera/
+
+## Technologies
+
+• React 17.0.2,
+• Firebase 7.2.3
+• Bootstrap 5.0.1
+• React Bootstrap 1.6.1
+• React Icons 4.2.0,
+• React Spinners 0.11.0.
 
 # Getting Started with Create React App
 
