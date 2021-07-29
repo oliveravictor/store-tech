@@ -5,34 +5,34 @@ import { NavLink, Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="menu__container">
-      <Link exact to="/">
+      <Link exact to="/store-tech/">
         <label className="menu__label">💻Store Tech</label>
       </Link>
       <ul className="menu">
         <NavLink
           className="menu__options"
-          to="/category/celulares"
+          to="/store-tech/category/celulares"
           activeClassName={"active"}
         >
           Celulares
         </NavLink>
         <NavLink
           className="menu__options"
-          to="/category/notebooks"
+          to="/store-tech/category/notebooks"
           activeClassName={"active"}
         >
           Notebooks
         </NavLink>
         <NavLink
           className="menu__options"
-          to="/category/televisores"
+          to="/store-tech/category/televisores"
           activeClassName={"active"}
         >
           Televisores
         </NavLink>
         <NavLink
           className="menu__options"
-          to="/cart"
+          to="/store-tech/cart"
           activeClassName={"cartOn"}
         >
           <Cartwidget />
