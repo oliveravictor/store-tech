@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/store-tech/static/css/main.446ba882.chunk.css",
-    "main.js": "/store-tech/static/js/main.841f4359.chunk.js",
-    "main.js.map": "/store-tech/static/js/main.841f4359.chunk.js.map",
-    "runtime-main.js": "/store-tech/static/js/runtime-main.b983b9da.js",
-    "runtime-main.js.map": "/store-tech/static/js/runtime-main.b983b9da.js.map",
-    "static/js/2.7e6ad571.chunk.js": "/store-tech/static/js/2.7e6ad571.chunk.js",
-    "static/js/2.7e6ad571.chunk.js.map": "/store-tech/static/js/2.7e6ad571.chunk.js.map",
-    "static/js/3.d10cceec.chunk.js": "/store-tech/static/js/3.d10cceec.chunk.js",
-    "static/js/3.d10cceec.chunk.js.map": "/store-tech/static/js/3.d10cceec.chunk.js.map",
+    "main.css": "/store-tech/static/css/main.f6058bca.chunk.css",
+    "main.js": "/store-tech/static/js/main.745b213a.chunk.js",
+    "main.js.map": "/store-tech/static/js/main.745b213a.chunk.js.map",
+    "runtime-main.js": "/store-tech/static/js/runtime-main.cae49c8d.js",
+    "runtime-main.js.map": "/store-tech/static/js/runtime-main.cae49c8d.js.map",
+    "static/js/2.cbbbe6ec.chunk.js": "/store-tech/static/js/2.cbbbe6ec.chunk.js",
+    "static/js/2.cbbbe6ec.chunk.js.map": "/store-tech/static/js/2.cbbbe6ec.chunk.js.map",
+    "static/js/3.9366ffd1.chunk.js": "/store-tech/static/js/3.9366ffd1.chunk.js",
+    "static/js/3.9366ffd1.chunk.js.map": "/store-tech/static/js/3.9366ffd1.chunk.js.map",
     "index.html": "/store-tech/index.html",
-    "static/css/main.446ba882.chunk.css.map": "/store-tech/static/css/main.446ba882.chunk.css.map",
-    "static/js/2.7e6ad571.chunk.js.LICENSE.txt": "/store-tech/static/js/2.7e6ad571.chunk.js.LICENSE.txt",
+    "static/css/main.f6058bca.chunk.css.map": "/store-tech/static/css/main.f6058bca.chunk.css.map",
+    "static/js/2.cbbbe6ec.chunk.js.LICENSE.txt": "/store-tech/static/js/2.cbbbe6ec.chunk.js.LICENSE.txt",
     "static/media/Cart.css": "/store-tech/static/media/cartpay.03b7a124.jpg",
-    "static/media/ErrorPage.css": "/store-tech/static/media/error-page.e968c14e.jpg",
     "static/media/Header.css": "/store-tech/static/media/header.cd5b8b6c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b983b9da.js",
-    "static/js/2.7e6ad571.chunk.js",
-    "static/css/main.446ba882.chunk.css",
-    "static/js/main.841f4359.chunk.js"
+    "static/js/runtime-main.cae49c8d.js",
+    "static/js/2.cbbbe6ec.chunk.js",
+    "static/css/main.f6058bca.chunk.css",
+    "static/js/main.745b213a.chunk.js"
   ]
 }
